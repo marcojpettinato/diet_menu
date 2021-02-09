@@ -1,0 +1,291 @@
+﻿<!DOCTYPE html>
+<html>
+<title>Diet Menu</title>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+
+<style>
+    body, html 
+    {
+        height: 100%
+    }
+
+    body, h1, h2, h3, h4, h5, h6 
+    {
+        font-family: "Amatic SC", sans-serif
+    }
+
+    .menu 
+    {
+        display: none
+    }
+
+    .bgimg 
+    {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("Plates.jpg");
+        min-height: 90%;
+    }
+</style>
+
+<body>
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top w3-hide-small">
+        <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
+            <a href="#" class="w3-bar-item w3-button">HOME</a>
+            <a href="#menu" class="w3-bar-item w3-button">MENU</a>
+            <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+            <a href="#signin" class="w3-bar-item w3-button">SIGN IN</a>
+            <a href="#signup" class="w3-bar-item w3-button">SIGN UP</a>
+        </div>
+    </div>
+
+    <!-- Header with image -->
+    <header class="bgimg w3-display-container w3-grayscale-min" id="home">
+        <!--  <div class="w3-display-bottomleft w3-padding">
+         <span class="w3-tag w3-xlarge">Open from 10am to 12pm</span>  -->
+        </div>
+        <div class="w3-display-middle w3-center">
+            <span class="w3-text-white w3-hide-small" style="font-size:100px"><br>Kitchen Workout</span>
+            <span class="w3-text-white w3-hide-large w3-hide-medium" style="font-size:60px"><b>thin<br>CRUST PIZZA</b></span>
+            <p><a href="#menu" class="w3-button w3-xxlarge w3-black">Let me see the menu</a></p>
+        </div>
+    </header>
+
+    <!-- Sign in -->
+    <div class="w3-container w3-padding-64 w3-blue-grey w3-grayscale-min w3-xlarge" id="signin">
+        <div class="w3-content">
+            <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Sign In</h1>
+            <form action="/action_page.php" target="_blank">
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Password" required name="Password"></p>
+                <p><button class="w3-button w3-light-grey w3-block" type="submit">SEND MESSAGE</button></p>
+            </form>
+        </div>
+    </div>
+    <!-- Menu Container -->
+    <div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu">
+        <div class="w3-content">
+
+            <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">THE MENU</h1>
+            <div class="w3-row w3-center w3-border w3-border-dark-grey">
+                <a href="javascript:void(0)" onclick="openMenu(event, 'Proteins');" id="myLink">
+                    <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Proteins</div>
+                </a>
+                <a href="javascript:void(0)" onclick="openMenu(event, 'Carbs');">
+                    <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Carbs</div>
+                </a>
+                <a href="javascript:void(0)" onclick="openMenu(event, 'Fats');">
+                    <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Fats</div>
+                </a>
+                <a href="javascript:void(0)" onclick="openMenu(event, 'Misc');">
+                    <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Misc</div>
+                </a>
+
+                <a href="javascript:void(0)" onclick="openMenu(event, 'Supplements');">
+                    <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Supplements</div>
+                </a>
+            </div>
+
+            <div id="Proteins" class="w3-container menu w3-padding-32 w3-white">
+                <h1><b>Tuna Salad</b> </h1>
+                <p class="w3-text-grey">20g. Carbs, 9g. Fats, 38g. Protein, 338 Calories <input type="checkbox" id="tunaS" onclick="updateMacros()" /> </p> <br>
+                <!--<p id="text" style="display:none">Tuna Salad was added!</p>-->
+                <hr>
+
+                <h1><b>Pure Tuna</b> </h1>
+                <p class="w3-text-grey">2g. Carbs, 5g. Fats, 41g. Protein, 205 Calories <input type="checkbox" id="Ptuna" name="Ptuna" value="Ptuna" /> </p> <br>
+                <hr>
+
+                <h1><b>Turkey and Sweet Potatoe</b> </h1>
+                <p class="w3-text-grey">23g. Carbs, 0g. Fats, 45.6g. Protein, 286 Calories <input type="checkbox" id="Ptuna" name="Ptuna" value="Ptuna" /> </p> <br>
+                <hr>
+
+                <h1><b>Shrimp</b> </h1>
+                <p class="w3-text-grey">0 Carbs, 1.5g. Fats, 21g. Protein, 100 Calories <input type="checkbox" id="Ptuna" name="Ptuna" value="Ptuna" /> </p> <br>
+                <hr>
+
+                <h1><b>Chicken and Broccoli</b> </h1>
+                <p class="w3-text-grey">8g. Carbs, 6g. Fats, 58g. Protein, 320 Calories <input type="checkbox" id="Ptuna" name="Ptuna" value="Ptuna" /> </p> <br>
+                <hr>
+
+                <h1><b>4 eggs</b> </h1>
+                <p class="w3-text-grey">0g. Carbs, 20g. Fats, 24g. Protein, 280 Calories <input type="checkbox" id="Ptuna" name="Ptuna" value="Ptuna" /> </p> <br>
+                <hr>
+
+                <h1><b>6 ounces of chicken</b> </h1>
+                <p class="w3-text-grey">0g. Carbs, 5.8g. Fats, 50g. Protein, 252 Calories <input type="checkbox" id="Ptuna" name="Ptuna" value="Ptuna" /> </p> <br>
+                <hr>
+
+                <h1><b>Salmon</b> </h1>
+                <p class="w3-text-grey">0g. Carbs, 4g. Fats, 24g. Protein, 125 Calories <input type="checkbox" id="Ptuna" name="Ptuna" value="Ptuna" /> </p> <br>
+                <hr>
+
+                <h1><b>Ground beef and kidney beans (chuck with beans)</b> </h1>
+                <p class="w3-text-grey">19g. Carbs, 5g. Fats, 45g. Protein, 660 Calories <input type="checkbox" id="Ptuna" name="Ptuna" value="Ptuna" /> </p> <br>
+                <hr>
+            </div>
+
+            <div id="Carbs" class="w3-container menu w3-padding-32 w3-white">
+                <h1><b>Full Pb sammy</b> </h1>
+                <p class="w3-text-grey">22g. Carbs, 7.5g. Fats, 12g. Protein, 140 Calories <input type="checkbox" id="Ptuna" name="Ptuna" value="Ptuna" /> </p> <br>
+                <hr>
+
+                <h1><b>1.5 tbsp air popped popcorn</b> </h1>
+                <p class="w3-text-grey">10g. Carbs, 0.75g. Fats, 1g. Protein, 60 Calories <input type="checkbox" id="Ptuna" name="Ptuna" value="Ptuna" /> </p> <br>
+                <hr>
+
+
+                <h1><b>Dads salad</b> </h1>
+                <p class="w3-text-grey">40.5g. Carbs, 8.5g. Fats, 9.5g. Protein, 140.5 Calories <input type="checkbox" id="Ptuna" name="Ptuna" value="Ptuna" /> </p> <br>
+                <hr>
+
+
+                <h1><b>PB and Bananna Toast</b> </h1>
+                <p class="w3-text-grey">40g. Carbs, 2g. Fats, 12g. Protein, 211 Calories <input type="checkbox" id="Ptuna" name="Ptuna" value="Ptuna" /> </p> <br>
+                <hr>
+
+
+                <h1><b>apple</b> </h1>
+                <p class="w3-text-grey">25g. Carbs, 0.3g. Fats, 0.25g. Protein, 95 Calories <input type="checkbox" id="Ptuna" name="Ptuna" value="Ptuna" /> </p> <br>
+                <hr>
+
+
+                <h1><b>Greek yogurt</b> </h1>
+                <p class="w3-text-grey">17g. Carbs, 2.5g. Fats, 11g. Protein, 95 Calories <input type="checkbox" id="Ptuna" name="Ptuna" value="Ptuna" /> </p> <br>
+                <hr>
+
+
+                <h1><b>half cup of brown rice</b> </h1>
+                <p class="w3-text-grey">18g. Carbs, 1g. Fats, 2g. Protein, 80 Calories <input type="checkbox" id="Ptuna" name="Ptuna" value="Ptuna" /> </p> <br>
+                <hr>
+            </div>
+
+
+            <div id="Fats" class="w3-container menu w3-padding-32 w3-white">
+                <h1><b>Avo and egg toast</b> </h1>
+                <p class="w3-text-grey">9g. Carbs, 7g. Fats, 8g. Protein, 125 Calories <input type="checkbox" id="Ptuna" name="Ptuna" value="Ptuna" /> </p> <br>
+                <hr>
+
+
+            </div><br>
+
+            <div id="Misc" class="w3-container menu w3-padding-32 w3-white">
+
+                <h1><b>Jelly</b> </h1>
+                <p class="w3-text-grey">0g. Carbs, 0g. Fats, 0g. Protein, 50 Calories <input type="checkbox" id="Ptuna" name="Ptuna" value="Ptuna" /> </p> <br>
+                <hr>
+            </div><br>
+
+            <div id="Supplements" class="w3-container menu w3-padding-32 w3-white">
+
+                <h1><b>Protein Shake</b> </h1>
+                <p class="w3-text-grey">10g. Carbs, 5.5g. Fats, 31g. Protein, 200 Calories <input type="checkbox" id="tunaS" name="tunaS" value="tunaS" /> </p> <br>
+                <hr>
+
+                <h1><b>Casein Protein Shake</b> </h1>
+                <p class="w3-text-grey">24g. Carbs, 1g. Fats, 35g. Protein, 240 Calories <input type="checkbox" id="tunaS" name="tunaS" value="tunaS" /> </p> <br>
+                <hr>
+            </div><br>
+
+        </div>
+    </div>
+
+    <!-- Sign up -->
+    <div class="w3-container w3-padding-64 w3-blue-grey w3-grayscale-min w3-xlarge" id="signup">
+        <div class="w3-content">
+            <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">SIGN UP HERE</h1>
+            <p>SIGN UP HERE</p>
+            <!-- <p><span class="w3-tag">FYI!</span> We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</p>
+            <p class="w3-xxlarge"><strong>Reserve</strong> a table, ask for today's special or just send us a message:</p> -->
+            <form action="/action_page.php" target="_blank">
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="JohnSmith@gooogle.com" required name="Email"></p>
+                <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="Age" required name="Age" value="21"></p>
+                <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="Height feet:" required name="Height"></p>
+                <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="Height inches:" required name="Height"></p>
+                <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="Weight:" required name="Height"></p>
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Password" required name="Password"></p>
+                <p><button class="w3-button w3-light-grey w3-block" type="submit">SIGN UP</button></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- About Container -->
+    <div class="w3-container w3-padding-64 w3-red w3-grayscale w3-xlarge" id="about">
+        <div class="w3-content">
+            <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">About</h1>
+            <p>This plan was founded and used by college Basketball player Marco Pettinato in his journey to become healthier as he pursued his dreams of playing college basketball.</p>
+            <img src="MarcoP.jpg" style="width:100%" class="w3-margin-top w3-margin-bottom" alt="Marco">
+
+            <!-- <div class="w3-row">
+        <div class="w3-col s6">
+            <p>Mon & Tue CLOSED</p>
+            <p>Wednesday 10.00 - 24.00</p>
+            <p>Thursday 10:00 - 24:00</p>
+        </div>
+        <div class="w3-col s6">
+            <p>Friday 10:00 - 12:00</p>
+            <p>Saturday 10:00 - 23:00</p>
+            <p>Sunday Closed</p>
+        </div>
+    </div> -->
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+            <footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
+                <p>Powered by commitment and focus</p>
+                <!-- <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p> -->
+            </footer>
+
+            <script>
+                // Tabbed Menu
+                function openMenu(evt, menuName) {
+                    var i, x, tablinks;
+                    x = document.getElementsByClassName("menu");
+                    for (i = 0; i < x.length; i++)
+                    {
+                        x[i].style.display = "none";
+                    }
+                    tablinks = document.getElementsByClassName("tablink");
+                    for (i = 0; i < x.length; i++)
+                    {
+                        tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+                    }
+                    document.getElementById(menuName).style.display = "block";
+                    evt.currentTarget.firstElementChild.className += " w3-red";
+                }
+                document.getElementById("myLink").click();
+            </script>
+
+            <script>
+                function updateMacros()
+                {
+                    // Get the checkbox
+                    var checkBox = document.getElementById("myCheck");
+                    // Get the output text
+                    var text = document.getElementById("text");
+
+                    // If the checkbox is checked, display the output text
+                    if (checkBox.checked == true)
+                    {
+                        text.style.display = "block";
+                    }
+                    else
+                    {
+                        text.style.display = "none";
+                    }
+                }
+            </script>
+
+</body>
+    </html>
